@@ -5,25 +5,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Eventry Vendor Onboarding</title>
 <link rel="manifest" href="manifest.json" />
-<meta name="theme-color" content="#7c3aed" />
+<meta name="theme-color" content="#9C2E44" />
 <script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&display=swap" rel="stylesheet" />
 <style>
+  :root {
+    --ink: #12141C;
+    --ink-soft: #5B5F72;
+    --gold: #E3A03D;
+    --gold-soft: #F0C580;
+    --maroon: #9C2E44;
+    --maroon-dark: #7E2338;
+    --cream: #FBF6EC;
+    --line: rgba(18,20,28,0.12);
+  }
   * { box-sizing: border-box; }
-  body { font-family: 'Inter', sans-serif; background:#f8fafc; }
-  .font-display { font-family:'Sora', sans-serif; }
-  .card { background:#fff; border-radius:16px; border:1px solid #e2e8f0; padding:24px; }
-  .input { width:100%; padding:12px 16px; border:1px solid #cbd5e1; border-radius:12px; outline:none; font-size:15px; }
-  .input:focus { border-color:#7c3aed; box-shadow:0 0 0 3px rgba(124,58,237,0.15); }
-  .btn-primary { background:#7c3aed; color:#fff; padding:14px 24px; border-radius:12px; font-weight:700; border:none; cursor:pointer; transition:.2s; }
-  .btn-primary:hover { background:#6d28d9; }
-  .btn-secondary { background:#f1f5f9; color:#334155; padding:14px 24px; border-radius:12px; font-weight:700; border:none; cursor:pointer; }
-  .cat-tile { padding:18px; border-radius:12px; border:2px solid #e2e8f0; background:#fff; text-align:center; cursor:pointer; transition:.2s; }
-  .cat-tile:hover { border-color:#c4b5fd; background:#faf5ff; }
-  .cat-tile.active { border-color:#7c3aed; background:#ede9fe; color:#5b21b6; }
-  .step-num { width:40px; height:40px; background:#7c3aed; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:900; font-family:'Sora',sans-serif; flex-shrink:0; }
+  body { font-family: 'Inter', sans-serif; background:var(--cream); color:var(--ink); }
+  .font-display { font-family:'Fraunces', serif; }
+  .card { background:#fff; border-radius:16px; border:1px solid var(--line); padding:24px; box-shadow:0 1px 3px rgba(18,20,28,0.05); }
+  .input { width:100%; padding:12px 16px; border:1px solid rgba(18,20,28,0.18); border-radius:12px; outline:none; font-size:15px; color:var(--ink); background:#fff; }
+  .input:focus { border-color:var(--gold); box-shadow:0 0 0 3px rgba(227,160,61,0.2); }
+  .btn-primary { background:var(--maroon); color:var(--cream); padding:14px 24px; border-radius:12px; font-weight:700; border:none; cursor:pointer; transition:.2s; }
+  .btn-primary:hover { background:var(--maroon-dark); }
+  .btn-secondary { background:#F1ECDE; color:var(--ink); padding:14px 24px; border-radius:12px; font-weight:700; border:none; cursor:pointer; }
+  .cat-tile { padding:18px; border-radius:12px; border:2px solid var(--line); background:#fff; text-align:center; cursor:pointer; transition:.2s; }
+  .cat-tile:hover { border-color:var(--gold-soft); background:#FFF8EA; }
+  .cat-tile.active { border-color:var(--maroon); background:#FBEFF2; color:var(--maroon-dark); }
+  .step-num { width:40px; height:40px; background:var(--gold); color:var(--ink); border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-family:'Fraunces', serif; flex-shrink:0; }
   .hidden { display:none !important; }
+  .trust-note { display:flex; align-items:center; gap:8px; font-size:0.8rem; color:var(--maroon-dark); background:#FBEFF2; border:1px solid #EBC9D2; padding:8px 14px; border-radius:999px; width:fit-content; margin:0 0 22px; }
+
+  /* Bring the existing Tailwind utility classes onto the brand palette */
+  .text-slate-900 { color:var(--ink) !important; }
+  .text-slate-600 { color:var(--ink-soft) !important; }
+  .text-slate-500 { color:var(--ink-soft) !important; }
+  .bg-slate-50   { background:#fff !important; }
+  .bg-slate-100  { background:#F1ECDE !important; }
+  .bg-slate-200  { background:#E7DEC9 !important; }
+  .border-slate-100 { border-color:var(--line) !important; }
+  .border-slate-200 { border-color:var(--line) !important; }
+  .text-purple-600 { color:var(--maroon) !important; }
+  .text-purple-700 { color:#8A5A12 !important; }
+  .bg-purple-50  { background:#FDF3DF !important; }
+  .bg-purple-500 { background:var(--gold) !important; }
+  .border-purple-200 { border-color:#F0DBA8 !important; }
 </style>
 </head>
 <body>
@@ -52,6 +77,8 @@
     <div class="h-1.5 flex-1 rounded-full bg-slate-200"></div>
     <div class="h-1.5 flex-1 rounded-full bg-slate-200"></div>
   </div>
+
+  <p class="trust-note">✦ Free forever — no listing fee, no commission</p>
 
   <div class="card">
 
